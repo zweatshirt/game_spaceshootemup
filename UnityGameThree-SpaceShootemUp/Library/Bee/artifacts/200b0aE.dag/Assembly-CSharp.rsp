@@ -345,8 +345,10 @@
 "Assets/__Scripts/Enemy_4.cs"
 "Assets/__Scripts/Hero.cs"
 "Assets/__Scripts/Main.cs"
+"Assets/__Scripts/PowerUp.cs"
 "Assets/__Scripts/Projectile.cs"
 "Assets/__Scripts/Shield.cs"
+"Assets/__Scripts/Utils.cs"
 "Assets/__Scripts/Weapon.cs"
 -langversion:9.0
 
