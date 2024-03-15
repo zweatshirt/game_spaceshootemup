@@ -9,7 +9,7 @@ public class PowerUp : MonoBehaviour {
     // and y a max value for a Random.Range() that will be called later 
     public Vector2 rotMinMax = new Vector2(15,90);
     public Vector2 driftMinMax = new Vector2(.25f,2);
-    public float lifeTime = 6f; // Seconds the PowerUp exists
+    public float lifeTime = 4f; // Seconds the PowerUp exists
     public float fadeTime = 4f; // Seconds it will then fade
 
     [Header("Set Dynamically")]
@@ -51,7 +51,7 @@ public class PowerUp : MonoBehaviour {
 
 
     void Update () {
-        cube.transform.rotation = Quaternion.Euler( rotPerSecond*Time.time ); // b
+        cube.transform.rotation = Quaternion.Euler( rotPerSecond*Time.time );
         // Fade out the PowerUp over time
         // Given the default values, a PowerUp will exist for 10 seconds
         // and then fade out over 4 seconds.

@@ -259,6 +259,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa1c66d80c144b1ebc5791a332c868b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 5
+  score: 100
+  showDamageDuration: 0.1
+  powerUpDropChance: 1
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
+  lifeTime: 5
+  points: []
+  birthTime: 0
 --- !u!114 &-2429613115283211970
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -69,7 +69,6 @@ public class Hero : MonoBehaviour {
     // }
     
 
-
     void OnTriggerEnter(Collider other) { 
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
@@ -83,6 +82,7 @@ public class Hero : MonoBehaviour {
         if (go.tag == "Enemy") {
             shieldLevel--;
             Destroy(go);
+            Debug.Log("Issue in OnTriggerEnter if go.tag == Enemy");
         }  else if (go.tag == "PowerUp") {
             // If the shield was triggered by a PowerUp 
             AbsorbPowerUp(go);
@@ -130,7 +130,6 @@ public class Hero : MonoBehaviour {
         }
     }
     
-
     public float shieldLevel { 
         get {
             return(_shieldLevel); 
@@ -138,8 +137,9 @@ public class Hero : MonoBehaviour {
 
         set {
             _shieldLevel = Mathf.Min(value, 4);
+            Debug.Log(value);
             // If the shield is going to be set to less than zero 
-            if (value < 0) { // c
+            if (value < 0) {
                 Destroy(this.gameObject); }
                 Main.S.DelayedRestart(gameRestartDelay);
             }

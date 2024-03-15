@@ -58,21 +58,21 @@ public class Enemy : MonoBehaviour {
         tempPos.y -= speed * Time.deltaTime; pos = tempPos;
     }
     
-    void OnCollisionEnter( Collision coll ) { // a 
+    void OnCollisionEnter( Collision coll ) { 
         GameObject otherGO = coll.gameObject;
         switch (otherGO.tag) {
-            case "ProjectileHero": // b
+            case "ProjectileHero": 
                 Projectile p = otherGO.GetComponent<Projectile>(); // If this Enemy is off screen, don't damage it. 
-                if ( !boundCheck.isOnScreen ) { // c
+                if (!boundCheck.isOnScreen) {
                     Destroy( otherGO );
                     break; 
                 }
                 // Hurt this Enemy
-                ShowDamage(); // d
+                ShowDamage();
                 // Get the damage amount from the Main WEAP_DICT. 
                 health -= Main.GetWeaponDefinition(p.type).damageOnHit; 
 
-                if (health <= 0) { // d
+                if (health <= 0) {
                     if (!notifiedOfDestruction) {
                         Main.S.ShipDestroyed(this);
                     }
