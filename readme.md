@@ -19,4 +19,4 @@ This game made me reminisce of Kingdom Hearts space travel missions/sequences a 
 
 ## NOTE: 
 
-I have a bug with the shield where the value never seems to reach 0, yet every time the shield is broken, the game restarts. I have  absolutely 0 idea why. I spent quite a while trying to figure it out. I am hoping you are lenient with this issue since it's not on the grading rubric/criteria. Also, if you know what the issue is I would love to know so I can fix it.
+I have a bug with the shield where the value never seems to reach 0, yet every time the shield is broken, the game restarts. I have  absolutely 0 idea why. It's not an exception either, which makes it harder to test for. I spent quite a while trying to figure it out. I am hoping you are lenient with this issue since it's not on the grading rubric/criteria. Also, if you know what the issue is I would love to know so I can fix it.
