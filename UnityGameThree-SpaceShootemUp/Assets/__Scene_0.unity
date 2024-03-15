@@ -735,7 +735,7 @@ MonoBehaviour:
   gameRestartDelay: 2
   projectilePrefab: {fileID: 7804057446538638410, guid: aedbdb472fafd4c91b9c86295da5ef13, type: 3}
   projectileSpeed: 40
-  speed: 30
+  speed: 35
   rollMult: -45
   pitchMult: 30
   weapons:
@@ -745,6 +745,8 @@ MonoBehaviour:
   - {fileID: 1007046312}
   - {fileID: 1984995396}
   _shieldLevel: 1
+  lastTriggerGo: {fileID: 0}
+  lastTriggerGoT: {fileID: 0}
 --- !u!4 &1126913453
 Transform:
   m_ObjectHideFlags: 0
@@ -1491,6 +1493,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemies:
+  - {fileID: 8978484254710095416, guid: e02b085193d5a4070a58e079fbe5477c, type: 3}
+  - {fileID: 8978484254710095416, guid: e02b085193d5a4070a58e079fbe5477c, type: 3}
+  - {fileID: 8978484254710095416, guid: e02b085193d5a4070a58e079fbe5477c, type: 3}
+  - {fileID: 9007406228991686082, guid: 58ba34cd6cee24766ae8604baf39de87, type: 3}
+  - {fileID: 9007406228991686082, guid: 58ba34cd6cee24766ae8604baf39de87, type: 3}
+  - {fileID: 8342482620607710050, guid: f4d4b6894a08342a8b260316666bc02c, type: 3}
+  - {fileID: 8342482620607710050, guid: f4d4b6894a08342a8b260316666bc02c, type: 3}
+  - {fileID: 5204295334735946952, guid: bead2c42ed44f48968dd0eb00f3f5fa1, type: 3}
+  - {fileID: 5204295334735946952, guid: bead2c42ed44f48968dd0eb00f3f5fa1, type: 3}
   - {fileID: 2559088221485686583, guid: a8586e749c4684d9c9afe12857463f5d, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
@@ -1513,17 +1524,8 @@ MonoBehaviour:
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
-  - type: 6
-    letter: 
-    color: {r: 0.8018868, g: 0.73521036, b: 0.23829654, a: 1}
-    projectilePrefab: {fileID: 1193803361}
-    projectileColor: {r: 0.8207547, g: 0.65197605, b: 0.096787095, a: 1}
-    damageOnHit: 0
-    continuousDamage: 0
-    delayBetweenShots: 0
-    velocity: 0
   prefabPowerUp: {fileID: 5470418095996315758, guid: 727a51f9173a64815814d47a518c76f3, type: 3}
-  powerUpFrequency: 01000000010000000200000006000000
+  powerUpFrequency: 010000000100000002000000
 --- !u!114 &1799126838
 MonoBehaviour:
   m_ObjectHideFlags: 0

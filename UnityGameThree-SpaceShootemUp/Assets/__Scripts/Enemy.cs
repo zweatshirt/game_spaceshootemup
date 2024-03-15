@@ -1,6 +1,7 @@
 using System.Collections; // Required for Arrays & other Collections 
 using System.Collections.Generic; // Required for Lists and Dictionaries 
 using UnityEngine; // Required for Unity
+
 public class Enemy : MonoBehaviour {
     [Header("Set in Inspector: Enemy")]
     public float speed = 10f; // The speed in m/s
@@ -19,7 +20,7 @@ public class Enemy : MonoBehaviour {
 
     protected BoundChecker boundCheck;
     // This is a Property: A method that acts like a field 
-    public Vector3 pos { // a
+    public Vector3 pos {
         get {
             return(this.transform.position);
         }
@@ -31,7 +32,7 @@ public class Enemy : MonoBehaviour {
 
     void Awake() {
         boundCheck = GetComponent<BoundChecker>();
-        materials = Utils.GetAllMaterials( gameObject ); // b
+        materials = Utils.GetAllMaterials( gameObject );
         originalColors = new Color[materials.Length]; 
 
         for (int i=0; i<materials.Length; i++) { 
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour {
     void Update() { 
         Move(); 
 
-        if ( showingDamage && Time.time > damageDoneTime ) { // c 
+        if ( showingDamage && Time.time > damageDoneTime ) {
             UnShowDamage();
         }
 
@@ -80,15 +81,15 @@ public class Enemy : MonoBehaviour {
                     // Destroy this Enemy
                     Destroy(this.gameObject);
                 }
-                Destroy( otherGO ); // e
+                Destroy( otherGO );
                 break;
             default:
-                print( "Enemy hit by non-ProjectileHero: " + otherGO.name ); // f 
+                print( "Enemy hit by non-ProjectileHero: " + otherGO.name ); 
                 break;
         } 
     }
 
-    void ShowDamage() { // e
+    void ShowDamage() {
         foreach (Material m in materials) {
             m.color = Color.red;
         }
@@ -96,7 +97,7 @@ public class Enemy : MonoBehaviour {
         damageDoneTime = Time.time + showDamageDuration; 
     }
 
-    void UnShowDamage() { // f
+    void UnShowDamage() {
         for ( int i=0; i<materials.Length; i++ ) { 
             materials[i].color = originalColors[i];
         }
